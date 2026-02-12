@@ -2,7 +2,7 @@ import React from "react";
 
 const CheckIcon = () => (
   <svg
-    className="w-5 h-5 text-green-500 flex-shrink-0"
+    className="w-5 h-5 text-green-500 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
     fill="currentColor"
@@ -43,7 +43,7 @@ const PricingCard = ({
         {price}
         <span className="text-lg font-normal text-gray-500">/mês</span>
       </p>
-      <ul className="space-y-4 mb-8 flex-grow">
+      <ul className="space-y-4 mb-8 grow">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
             <CheckIcon />
