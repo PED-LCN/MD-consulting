@@ -8,7 +8,9 @@ const About: React.FC = () => {
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">O Que é a MD Consulting?</h2>
         <p className="max-w-3xl mx-auto text-gray-600 mb-16 text-lg">
-          MD Consulting é mais do que apenas uma aula; é uma consultoria personalizada focada na parte mais crucial do aprendizado de um idioma: <span className="font-semibold text-green-600">comunicação</span>. Garantindo não seja apenas a gramática correta, mas também culturalmente estratégica e persuasiva para o mercado americano.
+          MD Consulting é mais do que apenas uma aula; é uma consultoria personalizada focada na parte mais crucial do aprendizado de um idioma:  
+          <span className="font-semibold text-green-600"> comunicação</span>. 
+          Garantindo não seja apenas a gramática correta, mas também culturalmente estratégica e persuasiva para o mercado americano.
         </p>
         <div className="grid md:grid-cols-3 gap-12">
           <div className="flex flex-col items-center">
@@ -24,9 +26,9 @@ const About: React.FC = () => {
             <div className="bg-green-100 p-5 rounded-full mb-4">
               <ChatIcon className="h-10 w-10 text-green-600" />
             </div>
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">Conversassão Pratica</h3>
+            <h3 className="text-xl font-semibold text-blue-900 mb-2">Tradução Simultânea</h3>
             <p className="text-gray-600">
-              Nosso foco é a fala e a escuta ativa para desenvolver sua confiança e estratégias em situações da vida real.
+              Te ajudamos em traduções simultâneas em reuniões online, documentos e e-mails,como também realizamos preparações para apresentações .
             </p>
           </div>
           <div className="flex flex-col items-center">

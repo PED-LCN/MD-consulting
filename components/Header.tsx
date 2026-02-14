@@ -23,7 +23,7 @@ const Header: React.FC = () => {
 
   const handleLinkClick = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
@@ -33,20 +33,24 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMenuOpen ? "bg-blue-900 shadow-md" : "bg-transparent"
+        isScrolled || isMenuOpen
+          ? "bg-white md:bg-blue-900 shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <a
           href="#hero"
           onClick={(e) => handleLinkClick(e, "#hero")}
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-2 relative z-50"
         >
           <div
-            className="flex items-center space-x-1 w-12 h-12 bg-cover bg-center opacity-80 "
+            className="flex items-center space-x-1 w-12 h-12 bg-cover bg-center opacity-80"
             style={{ backgroundImage: `url(${logo})` }}
           ></div>
-          <span className="text-2xl font-bold text-blue-100">
+          <span
+            className={`text-2xl font-bold ${isScrolled || isMenuOpen ? "text-blue-900 md:text-blue-100" : "text-blue-100"}`}
+          >
             MD consulting
           </span>
         </a>
@@ -67,12 +71,12 @@ const Header: React.FC = () => {
           href="https://wa.me/5598182099179?text=Ol%C3%A1!%20Tenho%20interesse%20na%20consultoria%20de%20ingl%C3%AAs."
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-block bg-blue-100 text-blue-900 shadow-[0_0_25px_rgba(59,130,246,0.6)] hover:text-blue-900 font-bold py-2 px-6 rounded-full transition-transform duration-300 hover:scale-105 "
+          className="hidden md:inline-block bg-yellow-400 text-blue-900 shadow-[0_0_25px_rgba(59,130,246,0.6)] hover:text-blue-900 font-bold py-2 px-6 rounded-full transition-transform duration-300 hover:scale-105 "
         >
-          Get Started
+          Começar agora
         </a>
         <button
-          className="md:hidden text-blue-900 z-50"
+          className={`md:hidden z-50 ${isScrolled || isMenuOpen ? "text-white-900" : "text-blue-100"}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
@@ -110,8 +114,10 @@ const Header: React.FC = () => {
       </div>
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "transform translate-y-0" : "transform -translate-y-full"
+        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
+          isMenuOpen
+            ? "transform translate-y-0 opacity-100"
+            : "transform -translate-y-full opacity-0 pointer-events-none"
         }`}
       >
         <nav className="flex flex-col items-center space-y-4 py-6">
