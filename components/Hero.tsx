@@ -1,16 +1,26 @@
 import React from "react";
-import connection from "./icons/connection.JPEG";
+import connectionMobile from "./icons/connection_vertical.jpeg";
+import connectionDesktop from "./icons/connection.jpeg";
 
 const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen flex items-center justify-center text-center text-white"
+      className="relative pt-20 min-h-[75vh] md:h-screen flex items-center justify-center text-center text-white overflow-hidden"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${connection}')` }}
-      ></div>
+      {/* Mobile */}
+      <img
+        src={connectionMobile}
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover md:hidden"
+      />
+
+      {/* Desktop */}
+      <img
+        src={connectionDesktop}
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover hidden md:block"
+      />
       <div className="absolute inset-0 bg-blue-900 opacity-70"></div>
       <div className="relative z-10 px-6">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight animate-fade-in-down">

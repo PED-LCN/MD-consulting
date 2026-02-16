@@ -8,8 +8,7 @@ import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
-import WhatsAppIcon from "./components/icons/whatsAppIcon";
+import WhatsAppIcon from "./components/icons/WhatsAppIcon";
 
 const App: React.FC = () => {
   return (

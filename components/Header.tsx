@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "./icons/logo.jpeg";
+import logo from "./icons/logo_longa.jpeg";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,19 +44,13 @@ const Header: React.FC = () => {
           onClick={(e) => handleLinkClick(e, "#hero")}
           className="flex items-center space-x-2 relative z-50"
         >
-          <div
-            className="flex items-center space-x-1 w-12 h-12 bg-cover bg-center opacity-80"
-            style={{ backgroundImage: `url(${logo})` }}
-          ></div>
-          <span
-            className={`text-2xl font-bold ${
-              isScrolled || isMenuOpen
-                ? "text-blue-900 md:text-blue-100"
-                : "text-blue-100"
-            }`}
-          >
-            MD consulting
-          </span>
+          <div className="flex items-center space-x-1 w-auto h-auto bg-cover bg-center opacity-80">
+            <img
+              src={logo}
+              alt="Logo Longa"
+              className="h-10 md:h-16 object-contain"
+            />
+          </div>
         </a>
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
