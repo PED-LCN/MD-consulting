@@ -1,6 +1,4 @@
 import React from "react";
-import connectionMobile from "./icons/connection_vertical.jpeg";
-import connectionDesktop from "./icons/connection.jpeg";
 
 const Hero: React.FC = () => {
   return (
@@ -10,14 +8,14 @@ const Hero: React.FC = () => {
     >
       {/* Mobile */}
       <img
-        src={connectionMobile}
+        src="/connection_vertical.jpeg"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover md:hidden"
       />
 
       {/* Desktop */}
       <img
-        src={connectionDesktop}
+        src="/connection.jpeg"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover hidden md:block"
       />

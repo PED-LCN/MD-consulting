@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import logo from "./icons/logo_longa.jpeg";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +22,7 @@ const Header: React.FC = () => {
 
   const handleLinkClick = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    href: string,
+    href: string
   ) => {
     e.preventDefault();
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
@@ -46,7 +45,7 @@ const Header: React.FC = () => {
         >
           <div className="flex items-center space-x-1 w-auto h-auto bg-cover bg-center opacity-80 ">
             <img
-              src={logo}
+              src="/logo_longa.jpeg"
               alt="Logo Longa"
               className="h-10 md:h-16 object-contain rounded"
             />
